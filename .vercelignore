@@ -1,0 +1,8 @@
+.DS_Store
+.claude
+README.md
+.env*
+node_modules
+
+*.command
+*.bat

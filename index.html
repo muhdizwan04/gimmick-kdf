@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>KDF Reveal — Kedah Digital Festival</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Ambient -->
+<canvas id="backdrop"></canvas>
+<canvas id="stage"></canvas>
+<div class="grain"></div>
+<div class="vignette"></div>
+
+<!-- Chrome -->
+<header class="chrome topbar" id="topbar">
+  <div class="wordmark"><img class="wordmark-logo" src="logo.png" alt="Kedah Digital Festival"></div>
+  <div class="pill" id="pill" data-state="idle"><i class="dot"></i><span id="pillText">Standby</span></div>
+</header>
+
+<footer class="chrome footer" id="footer">
+  <div class="progress" id="progress"></div>
+</footer>
+
+<!-- Landing hero -->
+<section class="overlay" id="hero">
+  <div class="brand" role="img" aria-label="Kedah Digital Festival"><img src="logo.png" alt=""></div>
+  <button class="cta" id="activate">Activate</button>
+</section>
+
+<!-- Gesture calibration -->
+<section class="overlay calibrate" id="calibrate" hidden>
+  <h1>Kindly raise<br>your hand</h1>
+  <div class="ring">
+    <svg viewBox="0 0 128 128" aria-hidden="true">
+      <circle class="ring-track" cx="64" cy="64" r="58"/>
+      <circle class="ring-fill" id="calRing" cx="64" cy="64" r="58"/>
+    </svg>
+  </div>
+</section>
+
+<!-- Completion -->
+<section class="overlay" id="done" hidden></section>
+
+<!-- Montage stage -->
+<section class="montage" id="montage" hidden>
+  <div class="montage-frame">
+    <video id="montageVideo" playsinline preload="metadata"></video>
+  </div>
+</section>
+
+<!-- Held after the montage ends -->
+<div class="blackout" id="blackout" hidden></div>
+
+<!-- Operator monitor -->
+<aside class="monitor" id="monitor">
+  <video id="cam" playsinline muted autoplay></video>
+  <div class="readout">
+    <span>Hands <b id="mHands">0</b></span>
+    <span>Grip <b id="mGrip">—</b></span>
+    <span><b id="mFps">0</b> fps</span>
+  </div>
+</aside>
+
+<div class="toast" id="toast"></div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>

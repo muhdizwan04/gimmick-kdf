@@ -1,0 +1,29 @@
+# Secrets — Supabase keys, Vercel tokens, any env file
+.env*
+!.env.example
+
+# Platform / tooling state
+.vercel
+.claude
+node_modules/
+.DS_Store
+
+# Private: montage films and other event media (never in the repo)
+montage.*
+*.mp4
+*.mov
+*.webm
+*.m4v
+rewind 2.mp3
+
+# Private: working files, decks, build scratch, chat logs
+chat-history-*.md
+output/
+.codex-build-kdf/
+.codex-finalizer/
+*.pptx
+*.pdf
+
+# Local launchers (contain the live deploy URL)
+*.command
+*.bat

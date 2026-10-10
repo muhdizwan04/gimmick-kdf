@@ -1,0 +1,14 @@
+{
+  "name": "kdf-reveal",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Gesture-controlled jigsaw reveal for the Kedah Digital Festival launch",
+  "scripts": {
+    "dev": "python3 -m http.server 8420",
+    "start": "python3 -m http.server 8420",
+    "setup": "open -na 'Google Chrome' --args --start-fullscreen --user-data-dir=\"$HOME/.kdf-chrome\" --no-first-run --no-default-browser-check ${KDF_URL:-https://your-deploy.vercel.app}",
+    "kiosk": "open -na 'Google Chrome' --args --kiosk --user-data-dir=\"$HOME/.kdf-chrome\" --no-first-run --no-default-browser-check --autoplay-policy=no-user-gesture-required --disable-features=Translate ${KDF_URL:-https://your-deploy.vercel.app}",
+    "kiosk:local": "open -na 'Google Chrome' --args --kiosk --user-data-dir=\"$HOME/.kdf-chrome\" --no-first-run --no-default-browser-check --autoplay-policy=no-user-gesture-required --disable-features=Translate http://localhost:8420",
+    "deploy": "vercel --prod"
+  }
+}
